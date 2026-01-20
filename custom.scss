@@ -1,0 +1,253 @@
+/*-- scss:defaults --*/
+
+// Fonts
+$font-family-sans-serif: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+$presentation-heading-font: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+$presentation-font-size-root: 40px;
+$presentation-heading-color: #1a472a;
+$presentation-line-height: 1.4;
+
+// Colors
+$body-bg: #fefefe;
+$body-color: #2d3436;
+$link-color: #0077b6;
+
+/*-- scss:rules --*/
+
+.vintage-title {
+    font-family: 'Cinzel Decorative', cursive;
+    /* or another retro font */
+    font-size: 3em;
+    color: #6b4226;
+    /* warm brown tone */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 0 #f2d3ab, 4px 4px 0 #a67c52;
+    /* layered shadow for vintage look */
+}
+
+// Title slide styling
+.reveal .slides section.quarto-title-block {
+    text-align: center;
+}
+
+.reveal .slides section.quarto-title-block h1 {
+    color: white;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+}
+
+.reveal .slides section.quarto-title-block .subtitle {
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    font-size: 1.5em;
+    margin-top: 0.5em;
+}
+
+// Section headers
+.reveal h1 {
+    font-weight: 700;
+    text-transform: none;
+}
+
+.reveal h2 {
+    color: #636363;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.reveal h3 {
+    color: #2d6a4f;
+    font-weight: 700;
+}
+
+// Image styling
+.reveal img {
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+.reveal .r-stretch img {
+    max-height: 65vh;
+}
+
+// Columns
+.reveal .columns {
+    display: flex;
+    align-items: center;
+}
+
+// Lists
+.reveal ul {
+    list-style-type: none;
+    padding-left: 1em;
+}
+
+.reveal ul li::before {
+    content: "🌿 ";
+    margin-left: -1.5em;
+}
+
+.reveal ul li {
+    margin-bottom: 0.5em;
+}
+
+// Incremental list animation
+.reveal .incremental li {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.reveal .incremental li.visible {
+    opacity: 1;
+}
+
+// Panel tabset styling
+.reveal .panel-tabset {
+    margin-top: 1em;
+}
+
+.reveal .panel-tabset .nav-link {
+    background-color: #e9ecef;
+    color: #1a472a;
+    border-radius: 8px 8px 0 0;
+    padding: 0.5em 1.5em;
+    margin-right: 0.3em;
+}
+
+.reveal .panel-tabset .nav-link.active {
+    background-color: #1a472a;
+    color: white;
+}
+
+// Table styling
+.reveal table {
+    font-size: 0.8em;
+    border-collapse: collapse;
+    margin: 1em auto;
+}
+
+.reveal table th {
+    background-color: #1a472a;
+    color: white;
+    padding: 0.8em 1.2em;
+}
+
+.reveal table td {
+    padding: 0.6em 1em;
+    border-bottom: 1px solid #ddd;
+}
+
+.reveal table tr:hover {
+    background-color: #f5f5f5;
+}
+
+// Background sections
+.reveal section[data-background-color="#1a472a"] h1,
+.reveal section[data-background-color="#1a472a"] h2,
+.reveal section[data-background-color="#1a472a"] p {
+    color: white;
+}
+
+.reveal section[data-background-color="#0077b6"] h1,
+.reveal section[data-background-color="#0077b6"] h2,
+.reveal section[data-background-color="#0077b6"] p {
+    color: white;
+}
+
+.reveal section[data-background-color="#2d6a4f"] h1,
+.reveal section[data-background-color="#2d6a4f"] h2,
+.reveal section[data-background-color="#2d6a4f"] p {
+    color: white;
+}
+
+.reveal section[data-background-color="#003049"] h1,
+.reveal section[data-background-color="#003049"] h2,
+.reveal section[data-background-color="#003049"] p {
+    color: white;
+}
+
+.reveal section[data-background-color="#3d405b"] h1,
+.reveal section[data-background-color="#3d405b"] h2,
+.reveal section[data-background-color="#3d405b"] p {
+    color: white;
+}
+
+.reveal section[data-background-color="#6b4423"] h1,
+.reveal section[data-background-color="#6b4423"] h2,
+.reveal section[data-background-color="#6b4423"] p {
+    color: white;
+}
+
+.reveal section[data-background-color="#588157"] h1,
+.reveal section[data-background-color="#588157"] h2 {
+    color: white;
+}
+
+.reveal section[data-background-color="#264653"] h1,
+.reveal section[data-background-color="#264653"] h2,
+.reveal section[data-background-color="#264653"] p {
+    color: white;
+}
+
+// Responsive adjustments
+@media screen and (max-width: 768px) {
+    .reveal .columns {
+        flex-direction: column;
+    }
+
+    .reveal .columns .column {
+        width: 100% !important;
+        margin-bottom: 1em;
+    }
+
+    .reveal img {
+        max-width: 95%;
+        max-height: 50vh;
+    }
+
+    .reveal h1 {
+        font-size: 1.8em;
+    }
+
+    .reveal h2 {
+        font-size: 1.4em;
+    }
+
+    .reveal ul li {
+        font-size: 0.9em;
+    }
+}
+
+// Print/PDF styling
+@media print {
+    .reveal img {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+// Smooth transitions for stacked images
+.reveal .r-stack>img {
+    transition: opacity 0.5s ease-in-out;
+}
+
+// Custom box styling
+.reveal .callout {
+    border-radius: 8px;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+// Footer styling
+.reveal .slide-footer {
+    font-size: 0.6em;
+    color: #666;
+}
+
+// Better bullet points for certain slides
+.reveal section.smaller ul li::before {
+    content: "• ";
+}

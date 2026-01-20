@@ -1,0 +1,5 @@
+# Exclude Quarto source files
+*.qmd
+
+# Quarto cache
+.quarto/
